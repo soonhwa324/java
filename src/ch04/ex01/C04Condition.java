@@ -12,7 +12,7 @@ public class C04Condition {
 		
 		int x = 0;
 		int y = 0;
-		if((x = 1 + 2) > 0 || (y = 1 -2) > 0)
+		if((x = 1 + 2) > 0 || (y = 1 - 2) > 0)
 			System.out.printf("x: %d, y: %d\n", x, y);
 		
 		String s = "he";
