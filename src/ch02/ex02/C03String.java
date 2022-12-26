@@ -11,6 +11,8 @@ public class C03String {
 		String sumStr = "" + sum;//class타입의 변수는 4byte
 		System.out.println(sumStr);
 		
+		int i = Integer.parseInt(sumStr);
+		
 		String s = a + b + "";
 		System.out.println(s);
 		
