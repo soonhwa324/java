@@ -12,7 +12,7 @@ public class H02Calculator {
 		
 		String tmp = "";
 		boolean isGood = false;
-		String errMsg = "input 0 or natural numer.";
+		String errMsg = "input 0 or natural number.";
 		
 		do {
 			do {
