@@ -5,30 +5,22 @@ import java.time.LocalDate;
 public class User {
 	private String userName;
 	private int age;
-	private LocalDate today;
-	boolean isGood;
-	
+	private LocalDate regDate;
 	
 	public String getUserName() {
 		return userName;
 	}
 	
 	public void setUserName(String userName) {
-			//isGood = false;
-		//	isGood = userName.matches("[a-z]+");
-		//	if(isGood) {
-				this.userName = userName;
-			//}
-		//	else System.out.println("영어로 입력");
-
+		this.userName = userName;
 	}
 	
-	public LocalDate getToday() {
-		return today;
+	public LocalDate getRegDate() {
+		return regDate;
 	}
 
-	public void setToday(LocalDate today) {
-		this.today = today;
+	public void setRegDate(LocalDate regDate) {
+		this.regDate = regDate;
 	}
 
 	public int getAge() {
@@ -38,6 +30,4 @@ public class User {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	
 }

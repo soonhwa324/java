@@ -5,28 +5,42 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
+		String userName = "";
+		int age = 0;
+		LocalDate regDate = null;
+		
 		Scanner sc = new Scanner(System.in);
-		User user = new User();
-		boolean isGood;
-		System.out.print("이름: ");
+		String tmp = "";
+		boolean isGood = false;
+		
 		do {
-			isGood = false;
-			isGood = sc.nextLine().matches("[a-z]+");
-			if(isGood) {
-				user.setUserName(null);
-			}
+			System.out.print("이름: ");
+			userName = sc.nextLine();
+			isGood = userName.matches("[a-zA-Z가-힣]+");
+			if(!isGood) System.out.println("ERROR] 이름을 입력하세요.");
 		} while(!isGood);
 		
+		do {
+			isGood = false;
+			System.out.print("나이: ");
+			tmp = sc.nextLine();
+			isGood = tmp.matches("[0-9]+");
+			if(isGood) age = Integer.parseInt(tmp);
+			else System.out.println("ERROR] 나이를 입력하세요.");
+		} while(!isGood);
 		
-		System.out.print("나이: ");
-		user.setAge(sc.nextInt());
+		regDate = LocalDate.now();
 		
-		user.setToday(LocalDate.now());
+		User user = new User();
+		user.setUserName(userName);
+		user.setAge(age);
+		user.setRegDate(regDate);
 		
-		System.out.println();
-		System.out.printf("이름: %s\n나이: %d\n가입일: %s\n", user.getUserName(), user.getAge(), user.getToday());
+		System.out.printf("\n이름: %s\n나이: %d\n가입일: %s",
+				user.getUserName(), user.getAge(), user.getRegDate());
 	}
 }
+
 /*
 과제: 사용자를 생성하라.
 user가 user의 이름, 나이를 수동 입력한다.
