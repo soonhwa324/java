@@ -2,6 +2,8 @@ package ch05.home.ex06.case02;
 
 import java.util.Scanner;
 
+import ch06.home.ex03.case03.User;
+
 public class Console {
 	private static Scanner sc;
 	
@@ -48,6 +50,8 @@ public class Console {
 	public static void err(String msg) {
 		System.out.println("ERROR] " + msg);
 	}
+
+
 }
 /*
 과제: ch05.ex06.case02.Console을 고도화하라.
