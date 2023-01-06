@@ -24,7 +24,11 @@ public class Score {
 	public int getMath() {
 		return math;
 	}
-
+	
+	public int getSum() {
+		return this.sum;
+	}
+	
 	public void setSum(int sum) {
 		this.sum = sum;
 	}

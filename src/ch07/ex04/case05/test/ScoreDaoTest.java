@@ -17,6 +17,7 @@ public class ScoreDaoTest {
 		scoreDao.insertScore(score2);
 		
 		scores = scoreDao.selectScores();
-		for(Score score: scores) System.out.println(score);
+		for(Score score: scores)
+			System.out.println(score);
 	}
 }
