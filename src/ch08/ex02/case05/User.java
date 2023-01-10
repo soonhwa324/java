@@ -9,11 +9,13 @@ public class User {
 		this.level = level;
 	}
 	
-	public void upgradeLevel() {
+	public void upgradeLevel() {//업무가 소소할경우 domain에 적는게 효율적(원래 service)
 		Level nextLevel = level.next();
-		if(nextLevel == null)
-			throw new IllegalStateException(
-					"이미 최고 등급" + this.level + "입니다.");
-		this.level = nextLevel;
+		if(nextLevel != null) this.level = nextLevel;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("%s %s", userName, level);
 	}
 }

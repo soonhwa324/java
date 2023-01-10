@@ -10,7 +10,7 @@ public class MyClass {
 	public MyClass() {}
 	
 	@Method
-	public void play( ) {
+	public void play() {
 		@Local int i = 0;
 	}
 }
