@@ -6,8 +6,26 @@ public class Buffer {
 	public synchronized int remove() {
 		while(val == null) {
 			try {
-				wait();
-			}
+				wait(); //값이 없으면 wait
+			} catch(InterruptedException e) {}
 		}
+		
+		int val = this.val;
+		this.val = null;
+		
+		notifyAll();
+		
+		return val;
+	}
+	
+	public synchronized void add(Integer val) {
+		while(this.val != null) {
+			try {
+				wait();//값이 있으면 wait
+			} catch(InterruptedException e) {}
+		}	
+		
+		this.val = val;
+		notifyAll();
 	}
 }

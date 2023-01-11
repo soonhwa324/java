@@ -19,7 +19,7 @@ public class C02MyLogger {
 			logger.log(Level.SEVERE, e.getMessage());
 		}
 		
-		logger.info("로킹을 끝냅니다.");
+		logger.info("로깅을 끝냅니다.");
 	}
 	
 	public static void main(String[] args) {
